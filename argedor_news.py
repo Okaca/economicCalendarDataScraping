@@ -12,8 +12,6 @@ def job():
         #print(element[2])
         addInvestingNewsData(element[0], element[1], element[2], element[3])
 
-job()
-
 schedule.every().day.at("00:00").do(job)
 while True:
     schedule.run_pending()
